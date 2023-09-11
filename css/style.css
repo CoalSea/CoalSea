@@ -1380,6 +1380,29 @@ img {
     font-size: 30px;
 }
 
+#mainNav {
+    text-align: center;
+}
+
+#mainNav li {
+    display: inline-block;
+    margin: 0 15px; /* Adjust margin as needed */
+}
+
+#aboutUs {
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.inner_section {
+    text-align: center; /* Center the content within the container */
+}
+
+.team_section {
+    text-align: center; /* Center-align the team section */
+}
+
 #project-page-button-fullscreen li a {
     background: url(images/close.png) no-repeat #fff;
     background-size: 50px 50px;
