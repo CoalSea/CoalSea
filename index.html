@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
-    <title>EV-Website</title>
+    <title>CoalSea</title>
     <link rel="icon" href="Logo.svg" type="image/svg">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
                             class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
 			
-<div id="main-nav" class="collapse navbar-collapse navStyle text-center">
+		<div id="main-nav" class="collapse navbar-collapse navStyle text-center">
     <ul class="nav navbar-nav navbar-center" id="mainNav" style="text-align: center; display: flex; justify-content: center; width: 122%;">
 	<li class="active"><a href="#carousel-example-generic" class="scroll-link">Home</a></li>
         <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
@@ -428,6 +428,65 @@ document.addEventListener("DOMContentLoaded", function () {
 <style>
   .footer_bottom {
     padding-top: 20px; /* You can adjust the value (e.g., 20px) to increase or decrease the padding as needed */
+  }
+
+  /* Navigation Centering and Styling */
+  #mainNav {
+      text-align: center;
+  }
+
+  #mainNav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+  }
+
+  #mainNav a:hover {
+      background-color: #333;
+      color: #fff;
+  }
+
+  #mainNav .active a {
+      background-color: #333;
+      color: #fff;
+  }
+
+  /* About Section Styling */
+  #aboutUs {
+      text-align: center;
+      background-color: #f7f7f7;
+      padding: 40px 0;
+  }
+
+  /* Team Member Section Styling */
+  .team_section {
+      text-align: center;
+      padding: 40px 0;
+  }
+
+  .team_member_name {
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .team_member_description {
+      font-size: 18px;
+      color: #777;
+  }
+
+  /* Custom Font from Google Fonts (Montserrat) */
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+  body {
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      /* Add your responsive styles here */
   }
 </style>
 
