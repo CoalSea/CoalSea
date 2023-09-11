@@ -1,753 +1,155 @@
 <!DOCTYPE html>
-<html>
-	
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
-    <title>EV-Website</title>
-    <link rel="icon" href="Logo.svg" type="image/svg">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CoalSea - Innovating the Electric Power Grids">
+    <title>CoalSea - Innovating the Electric Power Grids</title>
 
-    <!--[if lt IE 9]>
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
-    <![endif]-->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css"> <!-- Add your custom styles here -->
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
-<style>
-  @keyframes scrollText {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
+<body>
 
-  .moving-text-container {
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .moving-text {
-    font-size: 18px; /* Increase the text size to your desired value */
-    color: white; /* Set text color to white */
-    text-decoration: none;
-    animation: scrollText 15s linear infinite;
-    display: inline-block;
-  }
-
-  .moving-text:hover {
-    animation-play-state: paused;
-  }
-</style>
-
-<div class="moving-text-container">
-  <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2328241" target="_blank" class="moving-text">ASCENT: From Sensors to Multiscale Digital Twin to Autonomous Operation of Resilient Electric Power Grids</a>
-</div>
-
-	
-<!--Header_section-->
-<header id="header_wrapper">
+<!-- Navigation Section -->
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <div class="header_box">
-            <nav class="navbar navbar-inverse" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
-                            data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span
-                            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    </button>
-			
-<div id="main-nav" class="collapse navbar-collapse navStyle text-center">
-    <ul class="nav navbar-nav navbar-center" id="mainNav" style="text-align: center; display: flex; justify-content: center; width: 122%;">
-	<li class="active"><a href="#carousel-example-generic" class="scroll-link">Home</a></li>
-        <li><a href="#aboutUs" class="scroll-link">About</a></li>
-        <li><a href="#research" class="scroll-link">Research Areas</a></li>
-        <li><a href="#dataset" class="scroll-link">Datasets</a></li>
-        <li><a href="#team" class="scroll-link">Team</a></li>
-        <li><a href="#industry" class="scroll-link">Industry Advisory Board</a></li>
-        <li><a href="#contact" class="scroll-link">Contact Us</a></li>
-    </ul>
-</div>
-
-
-            </nav>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">CoalSea</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </div>
-</header>
+</nav>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-	<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-	<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-	<li data-target="#carousel-example-generic" data-slide-to="5"></li>
-	<li data-target="#carousel-example-generic" data-slide-to="6"></li>
-	<li data-target="#carousel-example-generic" data-slide-to="7"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="img/bg-00.jpg" alt="..." class="img-responsive">
-            <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                 <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">In the future, transmission grids ...</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-            </div>
-        </div>
-	    
-        <div class="item">
-            <img src="img/bg-1.jpg" alt="..." class="img-responsive">
-            <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                <h3 class="slide-title animated fadeInDown"> <span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">extend under the ocean</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/bg-2.jpg" alt="..." class="img-responsive">
-           <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">and above</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/bg-33.jpg" alt="..." class="img-responsive" style="opacity: 0.7;">
-            <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: black; font-size: xx-large; font-size: 36px;">power EV charging stations along highways</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/bg-55.jpg" alt="..." class="img-responsive">
-            <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-            <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">assimilate many more converters</span></h3>
-           <h5 class="slide-text animated fadeIn"></h5>
-           </div>
-        </div>
-        <div class="item">
-            <img src="img/bg-44.jpeg" alt="..." class="img-responsive">
-            <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">use more of data and computational methods</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/bg-6.jpg" alt="..." class="img-responsive">
-          <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">electrify the nation with clean energy.</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/bg-77.jpg" alt="..." class="img-responsive">
-            <div class="carousel-caption" style="top: 35%; left: 50%; transform: translateX(-50%); text-align: center;">
-                <h3 class="slide-title animated fadeInDown"><span class="text-primary" style="color: white; font-size: xx-large; font-size: 36px;">Are we there yet?</span></h3>
-                <h5 class="slide-text animated fadeIn"></h5>
-        
-            </div>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Welcome to CoalSea</h1>
+            <p class="hero-subtitle">Innovating the Electric Power Grids</p>
+            <a href="#portfolio" class="btn btn-primary btn-hero">Explore Our Work</a>
         </div>
     </div>
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-
-<!-- Rest of your HTML content goes here -->
-
-<!-- Include Bootstrap and jQuery scripts at the end of your HTML page -->
-
-<section id="aboutUs"><!--Aboutus-->
-<div class="inner_wrapper">
-  <div class="container">
-    <h2>About</h2>
-    <div class="inner_section">
-	<div class="row">
-      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="img/about.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""></div>
-      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
-        	<div class=" delay-01s animated fadeInDown wow animated">
-			<!--<h3>Lorem Ipsum has been the industry's standard dummy text ever..</h3><br/>-->
-            <p>The modernization of power systems for clean energy by integrating multiple renewable resources is changing the dynamics of power grids at a fundamental level. There is a dire need to understand new phenomena and possible failure mechanisms to unlock the design of countermeasures so that operators can make electric grids more resilient. But the required degree of understanding must keep up with the pace of new technologies in generation and storage, sensing and communications, optimization and control, power electronics, machine learning, and data science. This NSF project aims to develop a unified framework towards this goal, starting from sensors to algorithms to real-time control. The project will bring transformative change by leveraging fundamental developments in control, power electronics, and machine learning, and fusing them with trusted power system models, significantly enhancing the ability to predict and control grid dynamics with a high share of renewable energy resources. Results will be verified by building a digital twin of a large-scale transmission grid. The intellectual merits of the project include a balanced solution between models of renewable-integrated power systems developed from first principles and those identified from data, and the convergence of advanced methods under development within otherwise disconnected research communities. The broader impacts of the project include addressing pressing research questions whose solution will enable the building blocks of a cleaner power grid. The project will also engage underrepresented groups in STEM.</p> <br/>
-<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
-</div>
-<div class="work_bottom"> <span>Want to know more..</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
-	   </div>
-      	
-      </div>
-	  
-      
-    </div>
-  </div> 
-  </div>
-</section>
-<!--Aboutus--> 
-
-
-<!--Research Areas-->
-<section  id="research">
-  <div class="container">
-    <h2>Research Areas</h2>
-    <div class="service_wrapper">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="service_block">
-            <div class="service_icon delay-03s animated wow  zoomIn"> 
-		    <img src="img/Dynamics.png" alt="Dynamics" style="width: 150px; height: 100px;">
-	    </div>
-            <h3 class="animated fadeInUp wow">Dynamics</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 borderLeft">			
-          <div class="service_block">
-             <div class="service_icon delay-03s animated wow  zoomIn"> 
-		    <img src="img/Control.png" alt="Control" style="width: 150px; height: 100px;">
-	    </div>
-            <h3 class="animated fadeInUp wow">Control</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 borderLeft">
-          <div class="service_block">
-             <div class="service_icon delay-03s animated wow  zoomIn"> 
-		    <img src="img/State Estimation.png" alt="State Estimation" style="width: 150px; height: 100px;">
-	    </div>
-            <h3 class="animated fadeInUp wow">State Estimation</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          </div>
-        </div>
-      </div>
-	   <div class="row borderTop">
-        <div class="col-lg-4 mrgTop">
-          <div class="service_block">
-            <div class="service_icon delay-03s animated wow  zoomIn"> 
-		    <img src="img/Sensors.png" alt="Sensors" style="width: 150px; height: 100px;">
-	    </div>
-            <h3 class="animated fadeInUp wow">Sensors</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 borderLeft mrgTop">
-          <div class="service_block">
-             <div class="service_icon delay-03s animated wow  zoomIn"> 
-		    <img src="img/Power Electronics.png" alt="Power Electronics" style="width: 150px; height: 100px;">
-	    </div>
-            <h3 class="animated fadeInUp wow">Power Electronics</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 borderLeft mrgTop">
-          <div class="service_block">
-             <div class="service_icon delay-03s animated wow  zoomIn"> 
-		    <img src="img/Machine Learning.png" alt="Machine Learning" style="width: 150px; height: 100px;">
-	    </div>
-            <h3 class="animated fadeInUp wow">Machine Learning</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Research Areas-->
-
-
-
-
-<!-- Portfolio -->
-<section id="dataset" class="content"> 
-  
-  <!-- Container -->
-  <div class="container portfolio_title"> 
-    
-    <!-- Title -->
-    <div class="section-title">
-      <h2>Datasets</h2>
-    </div>
-    <!--/Title --> 
-    
-  </div>
-  <!-- Container -->
-  
-  <div class="portfolio-top"></div>
-  
-  <!-- Portfolio Filters -->
-  <div class="dataset"> 
-    
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active">
-          <h5>All</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".github">
-          <h5>Github</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".matlab">
-          <h5>Matlab</h5>
-          </a></li>
-      </ul>
-    </div>
-    <!--/Portfolio Filters --> 
-    
-    <!-- Portfolio Wrapper -->
-<div class="isotope fadeInLeft animated wow" style="display: flex; flex-wrap: wrap; justify-content: space-between; height: auto; padding-left: 20px;" id="portfolio_wrapper"> 
-
-  <!-- Portfolio Item 1 - GitHub Code I -->
-  <div style="flex: 0 0 calc(33.33% - 20px); margin-right: 20px;" class="portfolio-item one-third github isotope-item">
-    <div class="portfolio_img">
-        <img src="img/github.jpeg" alt="Portfolio 1">
-    </div>
-    <div class="item_overlay">
-        <div class="item_info">
-            <h4 class="project_name">Github Code I</h4>
-        </div>
-    </div>
-  </div>
-
-  <!-- Portfolio Item 2 - MATLAB Code I -->
-  <div style="flex: 0 0 calc(33.33% - 20px); margin-right: 20px;" class="portfolio-item one-third matlab isotope-item">
-    <div class="portfolio_img">
-        <img src="img/graph.jpg" alt="Portfolio 2">
-    </div>
-    <div class="item_overlay">
-        <div class="item_info">
-            <h4 class="project_name">Matlab Code I</h4>
-        </div>
-    </div>
-  </div>
-
-  <!-- Portfolio Item 3 - GitHub Code II -->
-  <div style="flex: 0 0 calc(33.33% - 20px);" class="portfolio-item one-third github isotope-item">
-    <div class="portfolio_img">
-        <img src="img/code.jpeg" alt="Portfolio 3">
-    </div>
-    <div class="item_overlay">
-        <div class="item_info">
-            <h4 class="project_name">Github Code II</h4>
-        </div>
-    </div>
-  </div>
-
-</div>
-
-  
 </section>
 
-
-<section class="page_section team" id="team"><!--main-section team-start-->
-  <div class="container">
-
-
-    <h2>Team Members</h2>
-    <div class="team_section clearfix">
-	    
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-03s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Netto.jpg" alt="">	
-	<div class="team_member_name">Marcos Netto</div> <!-- Add the team member's name here -->
-	<div class="team_member_description">Dynamics</div> <!-- Team member's description (lower font) -->
-          <ul class="social-icons">
-            <li><a href="https://people.njit.edu/faculty/mn96" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=7vYtx9YAAAAJ&hl=en" class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/marcosnetto/" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-03s">Marcos Netto</h3>
-        <span class="wow fadeInDown delay-03s">Dynamics</span>
-        <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-	    
-      <div class="team_area">
-        <div class="team_box  wow fadeInDown delay-03s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Li.jpg" alt="">
-	<div class="team_member_name">Na Li</div> <!-- Add the team member's name here -->
-	<div class="team_member_description">Control</div> <!-- Team member's description (lower font) -->
-          <ul class="social-icons">
-            <li><a href="https://seas.harvard.edu/person/na-li" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=qdGelXoAAAAJ&hl=en&oi=ao"class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/na-li-0928909" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-06s">Na Li</h3>
-        <span class="wow fadeInDown delay-06s">Control</span>
-        <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-	    
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Zhao.jpg" alt="">
-	<div class="team_member_name">Junbo Zhao</div> <!-- Add the team member's name here -->
-	<div class="team_member_description">State Estimation</div> <!-- Team member's description (lower font) -->
-          <ul class="social-icons">
-            <li><a href="https://www.ee.uconn.edu/junbo-zhao" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=5HpDLaYAAAAJ&hl=en&oi=ao" class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/junbo-zhao-7b8254a6" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Junbo Zhao</h3>
-        <span class="wow fadeInDown delay-09s">State Estimation</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-    </div>
-    <div class="team_section clearfix">
-
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-03s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Pong.png" alt="">
-	<div class="team_member_name">Philip Pong</div> <!-- Add the team member's name here -->
-	<div class="team_member_description">Sensors</div> <!-- Team member's description (lower font) -->
-          <ul class="social-icons">
-            <li><a href="https://people.njit.edu/faculty/wp24" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=s9zr4jsAAAAJ&hl=en&oi=ao" class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/philippong" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-03s">Philip Pong</h3>
-        <span class="wow fadeInDown delay-03s">Sensors</span>
-        <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-	    
-      <div class="team_area">
-        <div class="team_box  wow fadeInDown delay-06s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Chen.jpg" alt="">
-	<div class="team_member_name">Minjie Chen</div> <!-- Add the team member's name here -->
-	<div class="team_member_description">Power Electronic</div> <!-- Team member's description (lower font) -->
-          <ul class="social-icons">
-            <li><a href="https://ece.princeton.edu/people/minjie-chen" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=ECMrftkAAAAJ&hl=en" class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/minjie-chen-bba2506" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-06s">Minjie Chen</h3>
-        <span class="wow fadeInDown delay-06s">Power Electronics</span>
-        <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-	    
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Lin.jpg" alt="">
-	<div class="team_member_name">Guang Lin</div> <!-- Add the team member's name here -->
-	<div class="team_member_description">Machine Learning</div> <!-- Team member's description (lower font) -->
-          <ul class="social-icons">
-            <li><a href="https://engineering.purdue.edu/ME/People/ptProfile?resource_id=117602" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=7lWVV2IAAAAJ&hl=en" class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/guang-lin-7a464624" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Guang Lin</h3>
-        <span class="wow fadeInDown delay-09s">Machine Learning </span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--/Team-->
-<section class="page_section advisory board" id="industry">
-  <div class="container">
-    <h2>Industry Advisory Board</h2>
-    <div class="team_section clearfix">
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-03s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Gevorgian.jpeg" alt="">
-	<div class="team_member_name">Vahan Gevorgian</div> <!-- Add the team member's name here -->
-          <ul class="social-icons">
-            <li><a href="https://www.nrel.gov/research/staff/vahan-gevorgian.html" class="fa fa-university"></a></li>
-            <li><a href="https://scholar.google.com/citations?user=Lads2rYAAAAJ&hl=en" class="fa fa-google"></a></li>
-            <li><a href="https://www.linkedin.com/in/vahan-gevorgian-8212b27" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-03s">Vahan Gevorgian</h3>
-        <span class="wow fadeInDown delay-03s">NREL</span>
-      </div>
-      <div class="team_area">
-        <div class="team_box  wow fadeInDown delay-06s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/King.jpg" alt="">
-	<div class="team_member_name">Chris King</div> <!-- Add the team member's name here -->
-          <ul class="social-icons">
-            <li><a href="https://www.linkedin.com/in/chriskingjd" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-06s">Chris King</h3>
-        <span class="wow fadeInDown delay-06s">Siemens</span>
-      </div>
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Watson.jpg" alt="">
-	<div class="team_member_name">Andrew C. Watson</div> <!-- Add the team member's name here -->
-          <ul class="social-icons">
-            <li><a href="https://www.linkedin.com/in/andrewchadwatson" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Andrew C. Watson</h3>
-        <span class="wow fadeInDown delay-09s">PSEG</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-	
-	
-<!--Footer-->
-<footer class="footer_wrapper" id="contact">
-  <!-- Existing Form HTML -->
-
-<div class="container">
-  <section class="page_section contact" id="contact">
-    <div class="contact_section">
-      <h2>Contact Us</h2>
-
-	    
-<form id="myForm" action="https://formspree.io/f/mbjvyvrd" method="POST">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your name" style="width: 100%;">
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" class="form-control" required placeholder="Enter your Email" style="width: 100%;">
-  </div>
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter your Message" style="width: 100%;"></textarea>
-  </div>
-  <!-- your other form fields go here -->
-  <button type="submit" class="btn btn-primary" style="width: 200px; margin-bottom: 20px;">Submit</button>
-</form>
-
-<div id="message-container">
-  <!-- The message will be displayed here -->
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the form element
-  const form = document.getElementById("myForm");
-
-  // Get the message container
-  const messageContainer = document.getElementById("message-container");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Get the form data
-    const formData = new FormData(form);
-
-    // Send a POST request to Formspree
-    fetch("https://formspree.io/f/mbjvyvrd", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Form submission was successful
-          messageContainer.innerHTML = "Details submitted successfully. We will be in touch soon!";
-          messageContainer.classList.add("success"); // Add a CSS class for styling
-        } else {
-          // Form submission had an error
-          messageContainer.innerHTML = "Details submitted successfully. We will be in touch soon!";
-          messageContainer.classList.add("success"); // Add a CSS class for styling
-        }
-      })
-      .catch((error) => {
-        // Handle any network errors here
-        console.error("Network error:", error);
-        messageContainer.innerHTML = "Details submitted successfully. We will be in touch soon!";
-        messageContainer.classList.add("success"); // Add a CSS class for styling
-      });
-
-    // Reset the form after submission
-    setTimeout(function () {
-      form.reset();
-      // Clear the message after a few seconds
-      setTimeout(function () {
-        messageContainer.innerHTML = "";
-        messageContainer.classList.remove("success", "error");
-      }, 5); // Delay for 5 seconds (adjust as needed)
-    }, 5); // Delay for 500 milliseconds (adjust as needed)
-  });
-});
-</script>
-
-<style>
-.success {
-  color: green;
-}
-
-.error {
-  color: red;
-}
-
-.team_box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0;
-}
-
-.team_box img {
-  max-width: 100%;
-  height: 100%;
-  transition: opacity 0.8s;
-}
-
-/* CSS for the team member's name and description */
-.team_box .team_member_name {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
-    color: #fff; /* Text color */
-    padding: 10px 20px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    font-size: 18px; /* Adjust font size for the name */
-}
-
-.team_box .team_member_description {
-    position: absolute;
-    top: 55%; /* Adjust the positioning as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
-    color: #fff; /* Text color */
-    padding: 5px 15px; /* Adjust padding as needed */
-    opacity: 0;
-    transition: opacity 0.5s;
-    font-size: 12px; /* Adjust font size for the description (smaller) */
-}
-
-.team_box:hover .team_member_name,
-.team_box:hover .team_member_description {
-    opacity: 1;
-}
-
-/* Apply a dark gray filter to the image on hover */
-.team_box:hover img {
-  opacity: 0.3; /* Adjust the opacity value as needed */
-}
-
-
-.carousel-inner .item img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-}
-
-.portfolio_wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.portfolio-item {
-    width: calc(33.33% - 20px); /* 33.33% width with 20px gap */
-    position: relative;
-}
-
-.portfolio_img img {
-    width: 100%;
-    height: auto;
-}
-
-</style>
-
-
-<!--	    
-    <div class="center-form">
-        <div class="col-lg-8">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required style="width: 1100px;" placeholder="Enter your name">
+<!-- Portfolio Section -->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="section-title">Our Portfolio</h2>
+        <div class="portfolio-wrapper">
+            <!-- Portfolio Items Go Here -->
+            <!-- Example Portfolio Item -->
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <img src="img/portfolio-1.jpg" alt="Portfolio 1">
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required style="width: 1100px;" placeholder="Enter your Email">
+                <div class="item-overlay">
+                    <div class="item-info">
+                        <h4 class="project-name">Project 1</h4>
+                    </div>
                 </div>
+            </div>
+            <!-- End of Portfolio Item -->
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" class="form-control" rows="4" required style="width: 1100px;" placeholder="Enter your Message"></textarea>
+            <!-- Add more portfolio items here -->
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="page-section team" id="team">
+    <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-section">
+            <!-- Team Members Go Here -->
+            <!-- Example Team Member -->
+            <div class="team-member">
+                <div class="team-img">
+                    <img src="img/team-member-1.jpg" alt="Team Member 1">
                 </div>
-
-                <button type="submit" class="btn btn-primary" required style="width: 200px;">Submit</button>
-            </form>
-        </div>
-    </div> -->
-	    
-<style>
-  .footer_bottom {
-    padding-top: 20px; /* You can adjust the value (e.g., 20px) to increase or decrease the padding as needed */
-  }
-</style>
-
-<div class="container">
-  <div class="footer_bottom"><span>Copyright © 2023 Ev Website. </span> </div>
-</div>
-
-<div class="row">
-          <div class="col-lg-8 col-md-8 col-sm-12">
-            <div class="contact_info">
-              <h4 class="contact-info-title" style="padding-top: 25px;">Funding Agency</h4>
-              <div class="service-content">
-                <p>
-                  We gratefully acknowledge the support from the National Science Foundation.
-                </p>
-              </div>
+                <div class="team-info">
+                    <h4 class="team-name">John Doe</h4>
+                    <p class="team-role">Role</p>
+                    <ul class="social-icons">
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-envelope"></a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInLeft">
-            <div class="contact_info">
-              <figure>
-                <img src="img/nsf.svg" alt="" style="max-width: 70%;">
-              </figure>
-            </div>
-          </div>
+            <!-- End of Team Member -->
+
+            <!-- Add more team members here -->
         </div>
-      </div>
-    </section>
-  </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="page-section contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form id="contactForm" action="https://formspree.io/f/mbjvyvrd" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="Enter your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control" rows="4" required placeholder="Enter your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="message-container"></div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2023 CoalSea. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>
 
-<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
-<script type="text/javascript" src="js/jquery.nav.js"></script> 
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.js"></script>
-<script type="text/javascript" src="js/wow.js"></script> 
-<script type="text/javascript" src="js/custom.js"></script>
-<script src="js/jquery.min.js"></script>
+<!-- Scripts -->
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-scrolltofixed.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.isotope.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    // Add your custom JavaScript here
+</script>
 </body>
 </html>
