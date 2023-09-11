@@ -399,33 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
     height: auto;
 }
 
-</style>
-
-
-<!--	    
-    <div class="center-form">
-        <div class="col-lg-8">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required style="width: 1100px;" placeholder="Enter your name">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required style="width: 1100px;" placeholder="Enter your Email">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" class="form-control" rows="4" required style="width: 1100px;" placeholder="Enter your Message"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary" required style="width: 200px;">Submit</button>
-            </form>
-        </div>
-    </div> -->
-	    
-<style>
+	
   .footer_bottom {
     padding-top: 20px; /* You can adjust the value (e.g., 20px) to increase or decrease the padding as needed */
   }
@@ -433,8 +407,14 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Navigation Centering and Styling */
   #mainNav {
       text-align: center;
+      padding-left: 20px;
   }
 
+  footer {
+      margin: 0;
+      padding: 0;
+  }
+	
   #mainNav a {
       text-decoration: none;
       color: #333;
@@ -467,6 +447,15 @@ document.addEventListener("DOMContentLoaded", function () {
       padding: 40px 0;
   }
 
+  .contact_btn {
+      padding-left: 200px; /* Adjust the left padding as needed */
+  }
+
+  /* Center-align the team member section */
+  .team_area {
+      text-align: center;
+  }
+	
   .team_member_name {
       font-size: 24px;
       font-weight: bold;
@@ -488,6 +477,49 @@ document.addEventListener("DOMContentLoaded", function () {
   @media (max-width: 768px) {
       /* Add your responsive styles here */
   }
+
+  /* Style the form container */
+  #myForm {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  }
+
+  /* Style form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Style form input fields and textarea */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style the Submit button */
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Add hover effect to the Submit button */
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+	
 </style>
 
 <div class="container">
