@@ -20,7 +20,7 @@
   }
 
   .moving-text {
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'Arial', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -35,12 +35,20 @@
 <script>
   function changeTextColor() {
     const textElement = document.querySelector('.moving-text');
-    const colors = ['#ff9900', '#00ffcc', '#ff33cc', '#99ff33']; // Add more colors if needed
+    const colors = ['#ff9900', '#00ffcc', '#ff33cc', '#99ff33', '#ff6600', '#33ccff', '#ff99cc']; // Add more colors if needed
     let currentIndex = 0;
+    let position = 0;
 
     setInterval(() => {
       textElement.style.color = colors[currentIndex];
       currentIndex = (currentIndex + 1) % colors.length;
+
+      if (position < textElement.textContent.length) {
+        textElement.style.background = colors[currentIndex];
+        position++;
+      } else {
+        position = 0;
+      }
     }, 500); // Change color every 0.5 seconds (500 milliseconds)
   }
 
@@ -50,6 +58,7 @@
 <div class="moving-text-container">
   <a href="https://www.pandeysatyam.com" target="_blank" class="moving-text">CoalSea</a>
 </div>
+
 
 <!--Header_section-->
 <header id="header_wrapper">
