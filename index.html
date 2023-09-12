@@ -345,46 +345,33 @@ document.addEventListener("DOMContentLoaded", function () {
   transition: opacity 0.8s;
 }
 
-.team_box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0;
-  text-align: center; /* Center-align the content within .team_box */
-}
-
-.team_box img {
-  max-width: 100%;
-  height: auto; /* Use 'auto' to maintain aspect ratio */
-  transition: opacity 0.8s;
-}
-
 /* CSS for the team member's name and description */
 .team_box .team_member_name {
     position: absolute;
-    bottom: 10px; /* Adjust the positioning as needed */
+    top: 40%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
+    color: #fff; /* Text color */
     padding: 10px 20px;
     opacity: 0;
     transition: opacity 0.5s;
-    font-size: 18px;
+    font-size: 18px; /* Adjust font size for the name */
 }
 
 .team_box .team_member_description {
     position: absolute;
-    bottom: 0;
+    top: 55%; /* Adjust the positioning as needed */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
+    color: #fff; /* Text color */
+    padding: 5px 15px; /* Adjust padding as needed */
     opacity: 0;
     transition: opacity 0.5s;
-    font-size: 12px;
+    font-size: 12px; /* Adjust font size for the description (smaller) */
 }
 
 .team_box:hover .team_member_name,
@@ -392,9 +379,24 @@ document.addEventListener("DOMContentLoaded", function () {
     opacity: 1;
 }
 
+  /* Center-align the team member section */
+  .team_area {
+      text-align: center;
+  }
+	
+  .team_member_name {
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .team_member_description {
+      font-size: 18px;
+      color: #777;
+  }
+
 /* Apply a dark gray filter to the image on hover */
 .team_box:hover img {
-  opacity: 0.3;
+  opacity: 0.3; /* Adjust the opacity value as needed */
 }
 
 .carousel-inner .item img {
@@ -468,20 +470,7 @@ document.addEventListener("DOMContentLoaded", function () {
       padding: 40px 0;
   }
 
-  /* Center-align the team member section */
-  .team_area {
-      text-align: center;
-  }
-	
-  .team_member_name {
-      font-size: 24px;
-      font-weight: bold;
-  }
 
-  .team_member_description {
-      font-size: 18px;
-      color: #777;
-  }
 
   /* Custom Font from Google Fonts (Montserrat) */
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
