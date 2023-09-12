@@ -49,7 +49,7 @@ a, a:hover, a:active {
 }
 
 .black-bar a:hover {
-            color: red;
+            color: green;
         }
 .mainNav.navbar-center {
     display: flex;
