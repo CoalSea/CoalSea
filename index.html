@@ -17,6 +17,8 @@
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative; /* Add position: relative for gradient effect */
+    overflow: hidden; /* Hide overflow to create the gradient effect */
   }
 
   .moving-text {
@@ -25,30 +27,22 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
-  }
-
-  .moving-text:hover {
-    color: #ff9900;
+    position: relative;
   }
 </style>
 
 <script>
   function changeTextColor() {
     const textElement = document.querySelector('.moving-text');
-    const colors = ['#ff9900', '#00ffcc', '#ff33cc', '#99ff33', '#ff6600', '#33ccff', '#ff99cc']; // Add more colors if needed
+    const colors = ['#ff9900', '#00ffcc', '#ff33cc', '#99ff33', '#ff6633', '#33ccff']; // Add more colors if needed
     let currentIndex = 0;
-    let position = 0;
+    let position = 0; // Starting position
 
     setInterval(() => {
       textElement.style.color = colors[currentIndex];
       currentIndex = (currentIndex + 1) % colors.length;
-
-      if (position < textElement.textContent.length) {
-        textElement.style.background = colors[currentIndex];
-        position++;
-      } else {
-        position = 0;
-      }
+      position = (position + 1) % textElement.textContent.length;
+      textElement.style.background = `linear-gradient(to right, ${colors.slice(position).join(', ')}, ${colors.slice(0, position).join(', ')})`;
     }, 500); // Change color every 0.5 seconds (500 milliseconds)
   }
 
@@ -58,6 +52,7 @@
 <div class="moving-text-container">
   <a href="https://www.pandeysatyam.com" target="_blank" class="moving-text">CoalSea</a>
 </div>
+
 
 
 <!--Header_section-->
