@@ -1,28 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>CoalSea</title>
+    <link rel="icon" href="Logo.svg" type="image/svg">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+</head>
+
+<style>
+  .moving-text-container {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .moving-text {
+    font-size: 40px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+  }
+
+  .moving-text:hover {
+    color: #ff9900;
+  }
+</style>
+
+<script>
+  function changeTextColor() {
+    const textElement = document.querySelector('.moving-text');
+    const colors = ['#ff9900', '#00ffcc', '#ff33cc', '#99ff33']; // Add more colors if needed
+    let currentIndex = 0;
+
+    setInterval(() => {
+      textElement.style.color = colors[currentIndex];
+      currentIndex = (currentIndex + 1) % colors.length;
+    }, 500); // Change color every 0.5 seconds (500 milliseconds)
+  }
+
+  window.onload = changeTextColor;
+</script>
+
+<div class="moving-text-container">
+  <a href="https://www.pandeysatyam.com" target="_blank" class="moving-text">CoalSea</a>
+</div>
+
+<!--Header_section-->
 <header id="header_wrapper">
     <div class="container">
         <div class="header_box">
-            <!-- New Centered Header with "CoalSea" -->
-            <div class="center-header">
-                <h1 class="website-name">CoalSea</h1>
-            </div>
-            <!-- End of New Centered Header -->
-
             <nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
                     <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
                             data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span
                             class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
-                    <div id="main-nav" class="collapse navbar-collapse navStyle text-center">
-                        <ul class="nav navbar-nav navbar-center" id="mainNav" style="text-align: center; display: flex; justify-content: center; width: 122%;">
-                            <li class="active"><a href="#carousel-example-generic" class="scroll-link">Home</a></li>
-                            <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
-                            <li><a href="#research" class="scroll-link">Our Vision</a></li>
-                            <li><a href="#team" class="scroll-link">Our Team</a></li>
-                            <li><a href="#contact" class="scroll-link">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
+			
+		<div id="main-nav" class="collapse navbar-collapse navStyle text-center">
+    <ul class="nav navbar-nav navbar-center" id="mainNav" style="text-align: center; display: flex; justify-content: center; width: 122%;">
+	<li class="active"><a href="#carousel-example-generic" class="scroll-link">Home</a></li>
+        <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
+        <li><a href="#research" class="scroll-link">Our Vision</a></li>
+        <li><a href="#team" class="scroll-link">Our Team</a></li>
+        <li><a href="#contact" class="scroll-link">Contact Us</a></li>
+    </ul>
+		</div>
             </nav>
         </div>
     </div>
