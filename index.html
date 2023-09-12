@@ -224,7 +224,6 @@
           <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
           <img src="img/Netto.jpg" alt="">
           <div class="team_member_name">Marcos Netto</div>
-          <div class="team_member_description">Dynamics</div>
           <ul class="social-icons">
             <li><a href="https://people.njit.edu/faculty/mn96" class="fa fa-university"></a></li>
             <li><a href="https://scholar.google.com/citations?user=7vYtx9YAAAAJ&hl=en" class="fa fa-google"></a></li>
@@ -238,10 +237,6 @@
     </div>
   </div>
 </section>
-
-	
-
-
 
 <!--Footer-->
 <footer class="footer_wrapper" id="contact">
@@ -510,7 +505,24 @@ document.addEventListener("DOMContentLoaded", function () {
   .btn-primary:hover {
     background-color: #0056b3; /* Darker color on hover */
   }
-	
+
+  /* Add left padding and shift by 400px */
+.page_section.team {
+  padding-left: 400px;
+  margin-left: -400px;
+}
+
+/* Additional styles for the team member section */
+.page_section.team .team_box {
+  /* Your existing styles for .team_box here */
+}
+
+/* Adjust the left margin of the container to center-align it */
+.page_section.team .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
 
 <div class="container">
