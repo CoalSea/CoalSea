@@ -345,33 +345,46 @@ document.addEventListener("DOMContentLoaded", function () {
   transition: opacity 0.8s;
 }
 
+.team_box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  text-align: center; /* Center-align the content within .team_box */
+}
+
+.team_box img {
+  max-width: 100%;
+  height: auto; /* Use 'auto' to maintain aspect ratio */
+  transition: opacity 0.8s;
+}
+
 /* CSS for the team member's name and description */
 .team_box .team_member_name {
     position: absolute;
-    top: 40%;
+    bottom: 10px; /* Adjust the positioning as needed */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
-    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     padding: 10px 20px;
     opacity: 0;
     transition: opacity 0.5s;
-    font-size: 18px; /* Adjust font size for the name */
+    font-size: 18px;
 }
 
 .team_box .team_member_description {
     position: absolute;
-    top: 55%; /* Adjust the positioning as needed */
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
-    color: #fff; /* Text color */
-    padding: 5px 15px; /* Adjust padding as needed */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 15px;
     opacity: 0;
     transition: opacity 0.5s;
-    font-size: 12px; /* Adjust font size for the description (smaller) */
+    font-size: 12px;
 }
 
 .team_box:hover .team_member_name,
@@ -381,9 +394,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Apply a dark gray filter to the image on hover */
 .team_box:hover img {
-  opacity: 0.3; /* Adjust the opacity value as needed */
+  opacity: 0.3;
 }
-
 
 .carousel-inner .item img {
         width: 100%;
