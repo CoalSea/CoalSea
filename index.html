@@ -222,20 +222,20 @@
       <div class="team_area">
         <div class="team_box wow fadeInDown delay-03s">
           <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/Netto.jpg" alt="">
-          <div class="team_member_name">Marcos Netto</div>
+          <img src="img/Netto.jpg" alt="">	
+	<div class="team_member_name">Marcos Netto</div> <!-- Add the team member's name here -->
           <ul class="social-icons">
             <li><a href="https://people.njit.edu/faculty/mn96" class="fa fa-university"></a></li>
             <li><a href="https://scholar.google.com/citations?user=7vYtx9YAAAAJ&hl=en" class="fa fa-google"></a></li>
             <li><a href="https://www.linkedin.com/in/marcosnetto/" class="fa fa-linkedin"></a></li>
           </ul>
-          <h3 class="wow fadeInDown delay-03s">Marcos Netto</h3>
-          <span class="wow fadeInDown delay-03s">Dynamics</span>
-          <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
         </div>
+        <h3 class="wow fadeInDown delay-03s">Marcos Netto</h3>
+        <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
       </div>
     </div>
   </div>
+</div>
 </section>
 
 
@@ -333,45 +333,51 @@ document.addEventListener("DOMContentLoaded", function () {
   position: relative;
   overflow: hidden;
   border-radius: 0;
-  padding-left: 400px; /* Add left padding of 400px */
-  transform: translateX(400px); /* Shift the element by 400px to the right */
 }
-
 
 .team_box img {
   max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: 100%;
   transition: opacity 0.8s;
 }
 
 /* CSS for the team member's name and description */
-.team_box .team_member_name,
-.team_box .team_member_description {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
-  color: #fff; /* Text color */
-  padding: 10px 20px; /* Adjust padding */
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
 .team_box .team_member_name {
-  font-size: 24px;
-  font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    font-size: 18px; /* Adjust font size for the name */
 }
 
 .team_box .team_member_description {
-  font-size: 18px;
-  color: #777;
+    position: absolute;
+    top: 55%; /* Adjust the positioning as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
+    color: #fff; /* Text color */
+    padding: 5px 15px; /* Adjust padding as needed */
+    opacity: 0;
+    transition: opacity 0.5s;
+    font-size: 12px; /* Adjust font size for the description (smaller) */
 }
 
 .team_box:hover .team_member_name,
 .team_box:hover .team_member_description {
-  opacity: 1;
+    opacity: 1;
+}
+
+/* Apply a dark gray filter to the image on hover */
+.team_box:hover img {
+  opacity: 0.3; /* Adjust the opacity value as needed */
 }
 
 .carousel-inner .item img {
