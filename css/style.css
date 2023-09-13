@@ -536,9 +536,18 @@ a.contact_btn:hover {
 }
 
 .Portfolio-box img {
+    max-width: 100%;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
+}
+
+#dataset .Portfolio_img {
+  max-width: 100%;
+}
+
+#dataset .Portfolio-box_img {
+  max-width: 100%;
 }
 
 .Portfolio-box img:hover {
