@@ -7,14 +7,7 @@
     <style>
         body {
             overflow: hidden; /* Hide overflow to prevent scrollbars */
-        }
-        video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1; /* Place the video behind the content */
+            margin: 0; /* Remove margin to ensure full coverage of the video */
         }
         .container {
             position: absolute;
@@ -36,7 +29,7 @@
         .button {
             display: inline-block;
             padding: 25px 50px;
-            background-color: black; /* Blue color for the button */
+            background-color: black;
             border: none;
             border-radius: 5px;
             color: white;
@@ -45,18 +38,16 @@
             font-size: 32px;
         }
         .button:hover {
-            background-color: #235a94; /* Darker blue color for hover effect */
+            background-color: #235a94;
         }
     </style>
 </head>
 <body>
-    <video id="background-video" autoplay loop muted>
-        <source src="https://github.com/coalsea/coalsea.github.io/blob/main/stage1/ocean1.mp4" type="video/mp4"> <!-- Update the URL with your GitHub video link -->
-    </video>
     <div class="container">
         <h1>Welcome to Stage 1</h1>
         <p>Here, we will be embarking on an exciting journey to explore the fascinating world of different types of ships and an incredible variety of fishes that inhabit our oceans. You'll learn about their history, design, and the unique characteristics that make them such vital components of our maritime heritage and aquatic ecosystems.</p>
         <a href="https://mainpy-eqig2zuxgtwq45hvdzmqyx.streamlit.app" class="button">Start Learning</a>
     </div>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-ttd6nMJDoM?si=XKx2TZWJkHZ1G4rr?autoplay=1&loop=1&controls=0" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
