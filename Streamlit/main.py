@@ -82,7 +82,7 @@ landmark_data = {
 st.set_page_config(page_title="Nautical Information App", layout="wide")
 
     
-st.title("Explore Famous ")
+st.title("Explore Famous Nautical Items ")
 st.markdown("---")
 
 if st.sidebar.button("Click for Stage 2"):
@@ -91,7 +91,6 @@ st.sidebar.title("Categorys")
 selected_category = st.sidebar.selectbox("Select a category", list(landmark_data.keys()))
 
 if selected_category == "Famous Ships":
-    st.subheader("Select Ship")
     selected_landmark = st.sidebar.radio("Famous Ship", list(landmark_data["Famous Ships"].keys()))
     
     st.subheader("Selected Famous Ship Details")
@@ -103,7 +102,6 @@ if selected_category == "Famous Ships":
         st.write("No information available for this item.")
 
 elif selected_category == "Famous Fish":
-    st.subheader("Select Fish")
     selected_landmark = st.sidebar.radio("Famous Fish", list(landmark_data["Famous Fish"].keys()))
     
     st.subheader("Selected Famous Fish Details")
