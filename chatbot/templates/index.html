@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VeriBot Chat</title>
+    <style>
+        body {
+            background-color: black;
+            color: #dc143c;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: red;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        #verizon-logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px; /* Adjust the width as needed */
+        }
+        #chat-container {
+            background-color: black;
+            border: 1px solid red;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px; /* Set a maximum width if needed */
+            overflow: auto;
+            color: white;
+            height: 600px;
+        }
+        #chatbox {
+            height: 260px;
+        }
+        input[type="text"] {
+            width: 58%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid red;
+            background-color: black;
+            color: white;
+        }
+        #send_button {
+            background-color: #dc143c;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            width: 25%;
+        }
+        #send_button:hover {
+            background-color: red; /* Slightly lighter red on hover */
+        }
+        .user-message {
+            text-align: right;
+            color: white;
+        }
+        .bot-message {
+            text-align: left;
+            color: #ffdddd;
+        }
+        a {
+            color: #dc143c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img id="verizon-logo" src="https://www.verizon.com/about/sites/default/files/2021-07/New%20Project%20%2824%29.jpg" alt="Verizon Logo" style="width: 300px;" />
+    <h1>Hello! I'm VeriBot your AI, ask me anything.</h1>
+    <div id="chat-container">
+        <div id="chatbox"></div>
+    </div>
+    <input type="text" id="user_input" placeholder="You:">
+    <button id="send_button">Send</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function scrollToBottom() {
+            var chatbox = document.getElementById("chatbox");
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function sendMessage() {
+            var user_input = $("#user_input").val();
+            if (user_input.trim() !== "") {
+                $("#chatbox").append("<p class='user-message'>You: " + user_input + "</p>");
+                scrollToBottom(); // Scroll to the bottom after adding the user's message
+                $.post("/chatbot", { user_input: user_input }, function(data) {
+                    var botResponse = "<p class='bot-message'>VeriBot: " + data.response + "";
+                    // Make hyperlinks clickable
+                    botResponse = botResponse.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
+                    $("#chatbox").append(botResponse);
+                    scrollToBottom(); // Scroll to the bottom after adding the bot's response
+                    $("#user_input").val("");
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            $("#send_button").click(sendMessage);
+
+            $("#user_input").keydown(function(event) {
+                if (event.key === "Enter") {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
